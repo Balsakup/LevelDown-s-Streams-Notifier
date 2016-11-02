@@ -5,9 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LevelDown's Streams Notifier</title>
     <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
   </head>
   <body>
-    <h1>Version 1.0.3</h1>
+    <nav class="navbar"><a class="active" href="#list"><i class="icon-mic"></i></a><a href="#streamers"><i class="icon-star"></i></a><a href="#settings"><i class="icon-cog"></i></a></nav>
+    <main class="content">
+      <div class="panel active" id="list">
+        <ul></ul>
+        <div class="loading"><span class="loading__title">En attente</span>
+          <div class="loading__loader"></div>
+        </div>
+      </div>
+      <div class="panel" id="streamers">
+        <ul></ul>
+      </div>
+      <div class="panel" id="settings">
+        <ul>
+          <li>
+            <input type="checkbox" checked id="sound">
+            <label for="sound">Son des notifications</label>
+          </li>
+          <li class="title">Compteur des streamers
+            <li>
+              <input type="radio" name="counter" value="all" checked id="all">
+              <label for="all">Tous</label>
+            </li>
+            <li>
+              <input type="radio" name="counter" value="favorites" id="favorites">
+              <label for="favorites">Favoris</label>
+            </li>
+          </li>
+        </ul>
+      </div>
+    </main>
     <script src="js/jquery.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>

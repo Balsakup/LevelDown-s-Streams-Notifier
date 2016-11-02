@@ -5,8 +5,35 @@ html
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title LevelDown's Streams Notifier
         link(rel="stylesheet", href="css/app.min.css")
+        link(rel="stylesheet", href="css/fonts.css")
     body
-        h1 Version 1.0.3
+        nav.navbar
+            a(href="#list").active
+                i.icon-mic
+            a(href="#streamers")
+                i.icon-star
+            a(href="#settings")
+                i.icon-cog
+        main.content
+            #list.panel.active
+                ul
+                .loading
+                    span.loading__title En attente
+                    .loading__loader
+            #streamers.panel
+                ul
+            #settings.panel
+                ul
+                    li
+                        input(type="checkbox", checked)#sound
+                        label(for="sound") Son des notifications
+                    li.title Compteur des streamers
+                        li
+                            input(type="radio", name="counter", value="all", checked)#all
+                            label(for="all") Tous
+                        li
+                            input(type="radio", name="counter", value="favorites")#favorites
+                            label(for="favorites") Favoris
     
         script(src="js/jquery.min.js")
         script(src="js/app.min.js")

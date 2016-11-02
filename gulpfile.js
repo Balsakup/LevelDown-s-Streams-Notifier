@@ -13,7 +13,6 @@ gulp.task('pug', () => {
 gulp.task('sass', () => {
     return gulp.src('./src/sass/**/*.sass')
         .pipe($.sass())
-        .pipe($.autoprefixer())
         .pipe($.cleanCss())
         .pipe($.rename({
             suffix: '.min'
